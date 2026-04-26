@@ -52,3 +52,16 @@ h1, p{
   font-weight: 700;
   font-style: normal;
 }
+
+/* Use flexible layout on devices */
+.centered-container {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Make inputs mobile-friendly */
+input, select {
+  padding: 7px;
+}
