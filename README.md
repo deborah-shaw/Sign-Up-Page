@@ -87,7 +87,7 @@ A responsive browser-based **Sign-Up Page** that collects user information, vali
 - Backend integration (store user accounts)
 - Email verification system
 - Password strength meter UI
-- ♿ Accessibility improvements (ARIA labels, screen reader support)
+- Accessibility improvements (ARIA labels, screen reader support)
 
 ## 📄 License
 
