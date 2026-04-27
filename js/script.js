@@ -159,7 +159,7 @@ function updatePasswordUI() {
   let score = 0;
   for (let rule in rules){
     let element = document.querySelector("#" + rule);
-    if (checks[rule]) {
+    if (rules[rule]) {
       element.innerHTML = "✔ " + element.textContent.substring(2);
       element.style.color = "green";
       score++;
