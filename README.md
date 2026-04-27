@@ -1,6 +1,6 @@
 # 📝 Sign-Up Page
 
-A responsive browser-based **Sign-Up Page** that collects user information, validates input in real time, and dynamically interacts with external APIs for city, state, county, and username availability. The app features a clean UI with a **4th of July / American theme** design and demonstrates modern JavaScript concepts such as async/await, form validation, and API integration.
+A responsive browser-based **Sign-Up Page** that collects user information, validates input in real time, and dynamically interacts with external APIs for city, state, county, and username availability. The app features a clean UI with a **4th of July / American theme** design and demonstrates modern JavaScript concepts such as async/await, form validation, API integration, and DOM manipulation, and interactive UI/UX enhancements.
 
 ## 🕹️ Features
 
@@ -10,23 +10,30 @@ A responsive browser-based **Sign-Up Page** that collects user information, vali
   - Zip code input with auto-fills city, latitude, longitude
   - State and county selection via API
   - Username availability check (live API validation)
-  - Password validation
-- 🔄 Real-time validation and feedback:
-  - Required field checks
-  - Username availability validation (async API call)
-  - Strong password enforcement:
+  - Password + confirm password fields
+- 🔐 Password System (Enhanced UX)
+  - Strong password requirements:
     - Minimum 8 characters
     - At least 1 uppercase letter
     - At least 1 lowercase letter
     - At least 1 number
     - At least 1 special character
-    - No whitespace allowed
-  - Password match validation
+    - No whitespace
+  - Live validation checklist (updates while typing)
+  - Password strength bar (visual feedback)
+  - Show/Hide password toggle (for both fields)
+  - Real-time password match validation
+- 🔄 Real-time validation and feedback:
+  - Required field checks
+  - Username availability validation (async API call)
+  - Password validation using regex
+  - Immediate feedback with color-coded messages
   - Form submission blocked until all conditions pass
 - 🎨 UI / UX
   - Responsive layout for mobile and desktop
   - Clean card-style form with shadow and transparency
   - Gradient button with hover effects
+  - Interactive elements (hover, animations)
   - Google Fonts (Roboto)
   - 🇺🇸 Themed background image
 
@@ -63,11 +70,13 @@ A responsive browser-based **Sign-Up Page** that collects user information, vali
 2. ZIP code triggers API call → displays location data
 3. State selection loads counties dynamically
 4. Username is checked via API for availability
-5. Password is validated using regex rules
+5. Password updates:
+  - checklist ✔ / ❌
+  - strength bar 🔋
 6. On submit:
   - Form submission is prevented
   - All validations (including async username check) run
-  - If valid → form submits manually to `welcome.html`
+  - If valid → form submits to `welcome.html`
 
 ## 🧠 Behind the Scenes
 
@@ -84,10 +93,11 @@ A responsive browser-based **Sign-Up Page** that collects user information, vali
 
 ## 💡 Future Improvements
 
-- Backend integration (store user accounts)
+- Backend integration (Node.js + database)
 - Email verification system
-- Password strength meter UI
+- Secure password hashing
 - Accessibility improvements (ARIA labels, screen reader support)
+- Deployment with full-stack architecture
 
 ## 📄 License
 
