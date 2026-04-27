@@ -2,6 +2,10 @@
 
 A responsive browser-based **Sign-Up Page** that collects user information, validates input in real time, and dynamically interacts with external APIs for city, state, county, and username availability. The app features a clean UI with a **4th of July / American theme** design and demonstrates modern JavaScript concepts such as async/await, form validation, API integration, and DOM manipulation, and interactive UI/UX enhancements.
 
+## 🚀 Live Demo
+
+👉 Try it [here](https://deborah-shaw.github.io/Sign-Up-Page/)
+
 ## 🕹️ Features
 
 - 🧑‍💻 Collects user information:
@@ -36,10 +40,6 @@ A responsive browser-based **Sign-Up Page** that collects user information, vali
   - Interactive elements (hover, animations)
   - Google Fonts (Roboto)
   - 🇺🇸 Themed background image
-
-## 🚀 Live Demo
-
-👉 Try it [here](https://deborah-shaw.github.io/Sign-Up-Page/)
 
 ## 🗂️ Project Structure
 
