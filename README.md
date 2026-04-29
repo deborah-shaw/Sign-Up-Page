@@ -71,12 +71,12 @@ A responsive browser-based **Sign-Up Page** that collects user information, vali
 3. State selection loads counties dynamically
 4. Username is checked via API for availability
 5. Password updates:
-  - checklist ✔ / ❌
-  - strength bar 🔋
+	- checklist ✔ / ❌
+	- strength bar 🔋
 6. On submit:
-  - Form submission is prevented
-  - All validations (including async username check) run
-  - If valid → form submits to `welcome.html`
+	- Form submission is prevented
+	- All validations (including async username check) run
+	- If valid → form submits to `welcome.html`
 
 ## 🧠 Behind the Scenes
 
