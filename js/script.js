@@ -11,9 +11,7 @@ document.querySelector("#password").addEventListener("input", updatePasswordUI);
 document.querySelectorAll(".togglePassword").forEach(icon => {
   icon.addEventListener("click", togglePassword);
 });
-document.querySelector("#signupForm").addEventListener("submit", function(event) {
-  validateForm(event);
-});
+document.querySelector("#signupForm").addEventListener("submit", validateForm);
 
 // Display US States when the page loads
 async function displayStates() {
@@ -94,30 +92,6 @@ async function checkUsername() {
   return true;
 }
 
-// Validate form data
-async function validateForm(e) {
-  e.preventDefault();  // stop form submition first
-  let isValid = true;
-
-  // Validate username
-  if (!(await checkUsername())) {
-    isValid = false;
-  }
-
-  // Validate password
-  if (!validatePassword()) {
-    isValid = false;
-  }
-  if (!confirmPassword()) {
-    isValid = false;
-  }
-
-  // Only submit if valid
-  if (isValid) {
-    document.querySelector("#signupForm").submit();
-  }
-}
-
 // Validate password at least 8 characters, 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, with no whitespace
 function validatePassword() {
   document.querySelector("#passwordRule").innerHTML = "";
@@ -193,9 +167,35 @@ function togglePassword() {
   let inputId = this.getAttribute("data-target");
   let input = document.querySelector("#" + inputId);
   if (input.type === "password") {
-    input.type = "text"
+    input.type = "text";
+	this.textContent = "🔒";
   }
   else {
     input.type = "password";
+	this.textContent = "👁";
+  }
+}
+
+// Validate form data
+async function validateForm(e) {
+  e.preventDefault();  // stop form submition first
+  let isValid = true;
+
+  // Validate username
+  if (!(await checkUsername())) {
+    isValid = false;
+  }
+
+  // Validate password
+  if (!validatePassword()) {
+    isValid = false;
+  }
+  if (!confirmPassword()) {
+    isValid = false;
+  }
+
+  // Only submit if valid
+  if (isValid) {
+    document.querySelector("#signupForm").submit();
   }
 }
